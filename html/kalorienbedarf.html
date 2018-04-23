@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gesundheits Webseite</title>
+    <link rel="stylesheet" type="text/css" href="theme.css">
+</head>
+<body>
+
+<h1>Kalorienbedarf</h1>
+    
+<div class="topnav">
+  <a href="home.html">Home</a>
+  <a href="bmi.html">BMI</a>
+  <a href="gesundheitstipps.html">Gesundheitstipps</a>
+  <a href="kalorienbedarf.html">Kalorienbedarf</a>
+  <a href="lebensmittel.html">Lebensmittel</a>
+  <a href="rezept.html">Rezept</a>
+  <a href="rechner.html">Rechener</a>
+</div>
+
+<form>
+    <h3>Kalorienbedarf-Rechner</h3>
+    <label for="geschlecht">Geschlecht:
+    <input name="geschlecht" id="geschlecht" value="mann"type="radio">Männlich
+    <input name="geschlecht" id="geschlecht" value="frau"type="radio">Weiblich<br>
+    </label>
+    <label for="gewicht">Gewicht:
+    <input name="gewicht" id="gewicht" size="3" type="text" placeholder="Gewicht">kg<br>
+    </label>
+    <label for="groesse">Grösse:
+    <input name="groesse" id="groesse" size="3" type="text" placeholder="Grösse">m<br>
+    </label>
+    <label for="alter">Alter:
+    <input name="alter" id="alter" size="3" type="text" placeholder="Alter"><br>
+    </label>   
+    <label for="bewegung">Bewegung:
+    <input name="bewegung" id="bewegung" value="wenig"type="radio">wenig
+    <input name="bewegung" id="bewegung" value="mittel"type="radio">mittel
+    <input name="bewegung" id="bewegung" value="viel"type="radio">viel  <br>
+    </label>
+    <input type="submit" value="Berechnen"><br>
+    <input name="ausgabe" id="ausgabe" type="text"><br>
+</form> 
+</body>
+</html>
