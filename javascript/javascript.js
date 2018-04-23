@@ -2,10 +2,13 @@
 var bmiWert = 0;
 var rmr = 0;
 var kalorien = 0;
-var geschlecht="";
+
 var istMann = false;
 var istFrau = false;
 
+var bewegtWenig = 1.2;
+var bewegtMittel = 1.55;
+var bewgegtViel = 1.9;
 var gewicht;
 
 var groesse;
@@ -27,11 +30,11 @@ function bmiRechner() {
 }
 //KalorienBedarfRechner
 function kalorienBedarfRechner() {
-    geschlecht();
-    var gewicht = gewicht();
-    var groesse = groesse();
-    var alter = alter();
-    var bewegung = bewegung();
+    geschlechtBenutzer();
+    var gewicht = gewichtBenutzer();
+    var groesse = groesseBenutzer();
+    var alter = alterBenutzer();
+    var bewegung = bewegungBenutzer();
     
 	groesse = groesse * 100;
 	if (istMann) {
@@ -52,7 +55,7 @@ function geschlechtBenutzer() {
 	if ( geschlecht == "mann"){
 		istMann = true;
 	}
-	if( geschlech == "frau"){
+	if( geschlecht == "frau"){
 		istFrau = true;
 	}
 	
@@ -73,9 +76,6 @@ function alterBenutzer() {
 }
 //Auswertung wie viel sich der Benutzer Bewegt
 function bewegungBenutzer() {
-    var bewegtWenig = 1.2;
-    var bewegtMittel = 1.55;
-    var bewgegtViel = 1.9;
 	var bewegung = document.querySelector('input[name="bewegung"]:checked').value;
 	if(bewegung=="wenig"){
         return bewegtWenig;
