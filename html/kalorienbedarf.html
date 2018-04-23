@@ -4,6 +4,7 @@
 <title>Gesundheits Webseite</title>
 <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="../javascript/javascript.js"></script>
 </head>
 <body>
@@ -27,10 +28,10 @@
     <input name="geschlecht" id="geschlecht" value="frau"type="radio">Weiblich<br>
     </label>
     <label for="gewicht">Gewicht:
-    <input name="gewicht" id="gewicht" size="3" type="text" placeholder="Gewicht">kg<br>
+    <input name="gewicht" id="gewicht" size="3" type="text" placeholder="Gewicht">  kg<br>
     </label>
     <label for="groesse">Grösse:
-    <input name="groesse" id="groesse" size="3" type="text" placeholder="Grösse">m<br>
+    <input name="groesse" id="groesse" size="3" type="text" placeholder="Grösse">  m<br>
     </label>
     <label for="alter">Alter:
     <input name="alter" id="alter" size="3" type="text" placeholder="Alter"><br>
@@ -40,8 +41,15 @@
     <input name="bewegung" id="bewegung" value="mittel"type="radio">mittel
     <input name="bewegung" id="bewegung" value="viel"type="radio">viel  <br>
     </label>
-    <input type="submit" value="Berechnen" onsubmit="../javascript/kalorienbedarf"><br>
-    <input name="ausgabe" id="ausgabe" type="text"><br>
+    <input type="submit" value="Berechnen" onclick="kalorienBedarfRechner()" ><br>
+    <p name="kalorien" id="kalorien"></p>
+    <p name="fehler" id="fehler"> </p>
+    <br>
 </form> 
+    
+<footer>
+  <p>Vithursiya Vijayasingam, Iris Burkhalter & Satbirajah Markandu</p>
+</footer>
+    
 </body>
 </html>
