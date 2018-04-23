@@ -48,7 +48,7 @@ function kalorienBedarfRechner() {
 //Hier Beginnt die Auswertung der Benutzereingaben
 //Bestimmung welches Geschlecht der Benutzer hat
 function geschlechtBenutzer() {
-	geschlecht = document.querySelector('input[name="geschlecht"]:checked').value;
+	var geschlecht = document.querySelector('input[name="geschlecht"]:checked').value;
 	if ( geschlecht == "mann"){
 		istMann = true;
 	}
@@ -89,7 +89,7 @@ function bewegungBenutzer() {
 }
 //Auswerten wie viel der Benutzer wiegt
 function gewichtBenutzer() {
-	gewicht = document.querySelector("#gewicht_BMI").value;
+	gewicht = document.querySelector("#gewicht").value;
 	if(istEingabeZahl(gewicht)){
 		hatFehler=false;
 	}
@@ -103,7 +103,7 @@ function gewichtBenutzer() {
 }
 //Auswerten wie gross der Benutzer 
 function groesseBenutzer() {
-	groesse = document.querySelector("#groesse_BMI").value;
+	groesse = document.querySelector("#groesse").value;
 	if(istEingabeZahl(groesse)){
 		hatFehler=false;
 	}
@@ -117,7 +117,7 @@ function groesseBenutzer() {
 //Validation von den Benutzer eingaben
 //Überprüfung ob der Benutzer eine Zahl eingegeben hat
 function istEingabeZahl(eingabe) {
-	if(isInt(eingabe)){
+	if(Number.isInteger(eingabe)){
 		return true;
 	}
 	else{
