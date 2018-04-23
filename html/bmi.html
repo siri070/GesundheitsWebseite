@@ -2,21 +2,27 @@
 <html>
 <head>
 <title>Gesundheits Webseite</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script src="../javascript/javascript.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+
 </head>
 <body>
 
-<h1>BMI</h1>
-    
 <nav>
-<div class="topnav">
-  <a href="home.html">Home</a>
-  <a href="bmi.html">BMI</a>
-  <a href="gesundheitstipps.html">Gesundheitstipps</a>
-  <a href="kalorienbedarf.html">Kalorienbedarf</a>
-  <a href="lebensmittel.html">Lebensmittel</a>
-  <a href="rezept.html">Rezept</a>
-  <a href="rechner.html">Rechener</a>
+<div>
+  
+<ul>
+  <li><a class="logo">VIS AG</a></li>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="bmi.html">BMI</a></li>
+  <li><a href="gesundheitstipps.html">Gesundheitstipps</a></li>
+  <li><a href="kalorienbedarf.html">Kalorienbedarf</a></li>
+  <li><a href="lebensmittel.html">Lebensmittel</a></li>
+  <li><a href="rezept.html">Rezept</a></li>
+  <li><a href="rechner.html">Rechener</a></li>
+  </ul>
 </div>
 </nav>
     
@@ -28,9 +34,8 @@
     <label for="groesse">Grösse:
     <input name="groesse" id="groesse" type="text" size="3" placeholder="Grösse">m<br>
     </label>
-    <input type="submit" value="Berechnen"><br>
-    <input name="ausgabe" id="ausgabe" type="text"><br>
-    
+    <input type="submit" value="Berechnen" onclick="bmiRechner()"><br>
+    <p name="bmiWert" id="bmiWert"></p><br>
 </form>  
     
 
