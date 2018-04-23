@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Gesundheits Webseite</title>
-    <link rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="../javascript/javascript.js"></script>
 </head>
 <body>
@@ -39,8 +39,9 @@
     <input name="bewegung" id="bewegung" value="mittel"type="radio">mittel
     <input name="bewegung" id="bewegung" value="viel"type="radio">viel  <br>
     </label>
-    <input type="submit" value="Berechnen" onsubmit="../javascript/kalorienbedarf"><br>
-    <input name="ausgabe" id="ausgabe" type="text"><br>
+    <input type="submit" value="Berechnen" onclick="kalorienBedarfRechner()" ><br>
+    <p name="kalorienBedarf" id="kalorienBedarf"></p>
+    <br>
 </form> 
 </body>
 </html>

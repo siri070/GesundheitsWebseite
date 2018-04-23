@@ -19,14 +19,12 @@ var hatFehler = false;
 //Funktionen 
 //BMI Rechner 
 function bmiRechner() {
-	gewicht();
-	groesse();
+	gewichtBenutzer();
+	groesseBenutzer();
 	if (!hatFehler) {
 		bmiWert = gewicht / (groesse * groesse);
 		document.getElementById("bmiWert").innerHTML = bmiWert;
 	}
-	
-
 }
 //KalorienBedarfRechner
 function kalorienBedarfRechner() {
