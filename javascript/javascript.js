@@ -1,5 +1,6 @@
 //Variablem deklaration; 
 var bmiWert;
+var rmr;
 var kaloren;
 
 var geschlecht;
@@ -9,16 +10,17 @@ var istFrau = false;
 var alter; 
 
 var bewegung;
-var bewegtWenig = false;
-var bewegtMittel = false;
-var bewgegtViel = false;
+var bewegtWenig = 1,2;
+var bewegtMittel = 1,55;
+var bewgegtViel = 1,9;
 
 var gewicht;
 
 var groesse;
 
-var hatFehler= false;
-
+var hatFehler = false;
+//Männer: RMR = (10 × Gewicht in kg) + (6,25 × Größe in cm) – (5 × Alter) + 5
+//Frauen: RMR = (10 × Gewicht in kg) + (6,25 × Größe in cm) – (5 × Alter) – 161
 //Funktionen 
 //BMI Rechner 
 function bmiRechner(){
@@ -33,12 +35,26 @@ function bmiRechner(){
 }
 //KalorienBedarfRechner
 function kalorienBedarfRechner(){
+	groesse = groesse*100;
+	if(istMann){
+		rmr=(10*gewicht)+(6,25*groesse)-(5*alter)+5;
+	}
+	if(istFrau){
+		rmr=(10*gewicht)+(6,25*groesse)-(5*alter)-161;
+
+	}
 
 }
 //Hier Beginnt die Auswertung der Benutzereingaben
 //Bestimmung welches Geschlecht der Benutzer hat
 function geschlecht(){
 	geschlecht = document.querySelector('input[name="geschlecht"]:checked').value;
+	if(geschlecht=="mann"){
+		istMann=true;
+	}
+	if(geschlecht=="frau"){
+		istFrau=true;
+	}
 	
 }
 //Auswertung des Alters 
@@ -58,6 +74,9 @@ function alter(){
 //Auswertung wie viel sich der Benutzer Bewegt
 function bewegung(){
 	bewegung = document.querySelector('input[name="bewegung"]:checked').value;
+	if(bewegung=="wenig"){
+
+	}
 }
 //Auswerten wie viel der Benutzer wiegt
 function gewicht(){
