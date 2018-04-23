@@ -2,44 +2,54 @@
 <html>
 <head>
 <title>Gesundheits Webseite</title>
+<<<<<<< HEAD
 <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="theme.css">
+=======
+
+>>>>>>> 0fa2a132dacad745cf0bec18244e802382fb6cb3
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="../javascript/javascript.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+
 </head>
 <body>
 
-<h1>Kalorienbedarf</h1>
-    
-<div class="topnav">
-  <a href="home.html">Home</a>
-  <a href="bmi.html">BMI</a>
-  <a href="gesundheitstipps.html">Gesundheitstipps</a>
-  <a href="kalorienbedarf.html">Kalorienbedarf</a>
-  <a href="lebensmittel.html">Lebensmittel</a>
-  <a href="rezept.html">Rezept</a>
-  <a href="rechner.html">Rechener</a>
+<nav>
+<div>
+  
+<ul>
+  <li><a class="logo">VIS AG</a></li>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="bmi.html">BMI</a></li>
+  <li><a href="gesundheitstipps.html">Gesundheitstipps</a></li>
+  <li><a href="kalorienbedarf.html">Kalorienbedarf</a></li>
+  <li><a href="lebensmittel.html">Lebensmittel</a></li>
+  <li><a href="rezept.html">Rezept</a></li>
+  <li><a href="rechner.html">Rechener</a></li>
+  </ul>
 </div>
+</nav>
 
 <form>
     <h3>Kalorienbedarf-Rechner</h3>
     <label for="geschlecht">Geschlecht:
-    <input name="geschlecht" id="geschlecht" value="mann"type="radio">Männlich
-    <input name="geschlecht" id="geschlecht" value="frau"type="radio">Weiblich<br>
+        <input name="geschlecht" id="geschlecht" value="mann"type="radio">Männlich
+        <input name="geschlecht" id="geschlecht" value="frau"type="radio">Weiblich<br>
     </label>
     <label for="gewicht">Gewicht:
-    <input name="gewicht" id="gewicht" size="3" type="text" placeholder="Gewicht">  kg<br>
+        <input name="gewicht" id="gewicht" size="3" type="text" placeholder="Gewicht">  kg<br>
     </label>
     <label for="groesse">Grösse:
-    <input name="groesse" id="groesse" size="3" type="text" placeholder="Grösse">  m<br>
+        <input name="groesse" id="groesse" size="3" type="text" placeholder="Grösse">  m<br>
     </label>
     <label for="alter">Alter:
-    <input name="alter" id="alter" size="3" type="text" placeholder="Alter"><br>
+        <input name="alter" id="alter" size="3" type="text" placeholder="Alter"><br>
     </label>   
     <label for="bewegung">Bewegung:
-    <input name="bewegung" id="bewegung" value="wenig"type="radio">wenig
-    <input name="bewegung" id="bewegung" value="mittel"type="radio">mittel
-    <input name="bewegung" id="bewegung" value="viel"type="radio">viel  <br>
+        <input name="bewegung" id="bewegung" value="wenig" type="radio">wenig
+        <input name="bewegung" id="bewegung" value="mittel" type="radio">mittel
+        <input name="bewegung" id="bewegung" value="viel" type="radio">viel<br>
     </label>
     <input type="submit" value="Berechnen" onclick="kalorienBedarfRechner()" ><br>
     <p name="kalorien" id="kalorien"></p>

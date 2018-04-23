@@ -2,37 +2,43 @@
 <html>
 <head>
 <title>Gesundheits Webseite</title>
-<meta charset="utf-8" />
+
     <link rel="stylesheet" type="text/css" href="theme.css">
         <script src="../javascript.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
         <script src="../javascript/javascript.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+
 </head>
 <body>
 
-<h1>BMI</h1>
-    
-<div class="topnav">
-  <a href="home.html">Home</a>
-  <a href="bmi.html">BMI</a>
-  <a href="gesundheitstipps.html">Gesundheitstipps</a>
-  <a href="kalorienbedarf.html">Kalorienbedarf</a>
-  <a href="lebensmittel.html">Lebensmittel</a>
-  <a href="rezept.html">Rezept</a>
-  <a href="rechner.html">Rechener</a>
+<nav>
+<div>
+  
+<ul>
+  <li><a class="logo">VIS AG</a></li>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="bmi.html">BMI</a></li>
+  <li><a href="gesundheitstipps.html">Gesundheitstipps</a></li>
+  <li><a href="kalorienbedarf.html">Kalorienbedarf</a></li>
+  <li><a href="lebensmittel.html">Lebensmittel</a></li>
+  <li><a href="rezept.html">Rezept</a></li>
+  <li><a href="rechner.html">Rechener</a></li>
+  </ul>
 </div>
+</nav>
     
 <form>
     <h3>BMI-Rechner</h3>
     <label for="gewicht">Gewicht:
-    <input name="gewicht" id="gewicht" size="3" type="text" placeholder="Gewicht">  kg<br>
+        <input name="gewicht" id="gewicht" size="3" type="text" placeholder="Gewicht">  kg<br>
     </label>
     <label for="groesse">Grösse:
-    <input name="groesse" id="groesse" type="text" size="3" placeholder="Grösse">  m<br>
+        <input name="groesse" id="groesse" type="text" size="3" placeholder="Grösse">  m<br>
     </label>
     <button type="submit" value="Berechnen" onclick="bmiRechner()">Berechnen</button>
     <p name="bmiWert" id="bmiWert"></p><br>
-    <p name="fehler" id="fehler" style="color:red;"> </p>
+    <p name="fehler" id="fehler1" style="color:red;"> </p>
 </form>  
     
 <footer>

@@ -12,9 +12,20 @@ var bewegtWenig = 1.2;
 var bewegtMittel = 1.55;
 var bewgegtViel = 1.9;
 var hatFehler = false;
-
+var hatAlter = false;
+var hatGeschlecht = false;
+var hatBewegung = false;
+var hatGewicht = false;
+var hatGroesse = false; 
 //Validation von den Benutzer eingaben
 //Überprüfung ob der Benutzer eine Zahl eingegeben hat
+function hatEingabe(eingabe){
+	if(eingabe.length >0){
+		return true;
+	} else {
+		return false;
+	}
+}
 function istEingabeZahl(eingabe) {
 	if (Number.isInteger(eingabe)) {
 		return true;
@@ -26,12 +37,11 @@ function istEingabeZahl(eingabe) {
 function fehlerMeldung(fehlermeldung) {
 	document.getElementById("fehler").innerHTML = fehlermeldung;
 }
-
-
 //Hier Beginnt die Auswertung der Benutzereingaben
 //Bestimmung welches Geschlecht der Benutzer hat
 function geschlechtBenutzer() {
     var geschlecht = document.querySelector('input[name="geschlecht"]:checked').value;
+	hatGeschlecht = hatEingabe(geschlecht);
     if (geschlecht === "mann") {
 		istMann = true;
 	}
@@ -43,6 +53,7 @@ function geschlechtBenutzer() {
 //Auswertung des Alters 
 function alterBenutzer() {
 	var alter = document.querySelector("#alter").value;
+	hatAlter = hatEingabe(alter);
     alter = parseFloat(alter);
 	if (istEingabeZahl(alter)) {
 		hatFehler = false;
@@ -57,6 +68,7 @@ function alterBenutzer() {
 //Auswertung wie viel sich der Benutzer Bewegt
 function bewegungBenutzer() {
 	var bewegung = document.querySelector('input[name="bewegung"]:checked').value;
+	hatBewegung = hatEingabe(bewegung);
 	if (bewegung === "wenig") {
         return bewegtWenig;
 	}
@@ -70,6 +82,7 @@ function bewegungBenutzer() {
 //Auswerten wie viel der Benutzer wiegt
 function gewichtBenutzer() {
 	gewicht = document.querySelector("#gewicht").value;
+	hatGewicht = hatEingabe(gewicht);
     gewicht = parseFloat(gewicht);
 	if (istEingabeZahl(gewicht)) {
 		hatFehler = false;
@@ -84,6 +97,7 @@ function gewichtBenutzer() {
 //Auswertung wie gross der Benutzer ist 
 function groesseBenutzer() {
     groesse = document.querySelector("#groesse").value;
+	hatGroesse = hatEingabe(groesse);
     groesse = parseFloat(groesse);
 	if (istEingabeZahl(groesse)) {
 		hatFehler = false;
@@ -94,14 +108,12 @@ function groesseBenutzer() {
 		fehlerMeldung(fehler);
 	}
 }
-//Männer: RMR = (10 × Gewicht in kg) + (6,25 × Größe in cm) – (5 × Alter) + 5
-//Frauen: RMR = (10 × Gewicht in kg) + (6,25 × Größe in cm) – (5 × Alter) – 161
 //Funktionen 
 //BMI Rechner 
 function bmiRechner() {
 	gewichtBenutzer();
 	groesseBenutzer();
-	if (!hatFehler) {
+	if (!hatFehler && hatGewicht && hatGroesse) {
 		bmiWert = gewicht / (groesse * groesse);
 		document.getElementById("bmiWert").innerHTML = "Ihr BMI-Wert ist:" + bmiWert;
 	}
@@ -115,15 +127,17 @@ function kalorienBedarfRechner() {
     var bewegung = bewegungBenutzer();
     var rmr;
 	
-	groesse = groesse * 100;
-	if (istMann) {
-		rmr = (10 * gewicht) + (6.25 * groesse) - (5 * alter) + 5;
+	if(hatAlter&&hatBewegung&&hatGeschlecht&&hatGewicht&&hatGroesse){
+		groesse = groesse * 100;
+		if (istMann) {
+			rmr = (10 * gewicht) + (6.25 * groesse) - (5 * alter) + 5;
+		}
+		if (istFrau) {
+			rmr = (10 * gewicht) + (6.25 * groesse) - (5 * alter) - 161;
+		}
+		kalorien = rmr * bewegung;
+		document.getElementById("kalorien").innerHTML = "Sie haben einen Kalorienbedarf von " + kalorien +".";
 	}
-	if (istFrau) {
-		rmr = (10 * gewicht) + (6.25 * groesse) - (5 * alter) - 161;
-
-	}
-	kalorien = rmr * bewegung;
-    document.getElementById("kalorien").innerHTML = "Sie haben einen Kalorienbedarf von " + kalorien + ".";
+	
 
 }
