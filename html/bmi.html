@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Gesundheits Webseite</title>
 
     <link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -29,13 +30,14 @@
 <form>
     <h3>BMI-Rechner</h3>
     <label for="gewicht">Gewicht:
-    <input name="gewicht" id="gewicht" size="3" type="text" placeholder="Gewicht">kg<br>
+    <input name="gewicht" id="gewicht" size="3" type="text" placeholder="Gewicht">  kg<br>
     </label>
     <label for="groesse">Grösse:
-    <input name="groesse" id="groesse" type="text" size="3" placeholder="Grösse">m<br>
+    <input name="groesse" id="groesse" type="text" size="3" placeholder="Grösse">  m<br>
     </label>
-    <input type="submit" value="Berechnen" onclick="bmiRechner()"><br>
+    <button type="submit" value="Berechnen" onclick="bmiRechner()">Berechnen</button>
     <p name="bmiWert" id="bmiWert"></p><br>
+    <p name="fehler" id="fehler" style="color:red;"> </p>
 </form>  
     
 
