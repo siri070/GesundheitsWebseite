@@ -27,7 +27,7 @@ function hatEingabe(eingabe){
 	}
 }
 function istEingabeZahl(eingabe) {
-	if (Number.isInteger(eingabe)) {
+	if (!isNaN(eingabe)) {
 		return true;
 	} else {
 		return false;
@@ -35,8 +35,9 @@ function istEingabeZahl(eingabe) {
 }
 //Fehlermeldungen 
 function fehlerMeldung(fehlermeldung) {
-	document.getElementById("fehler").innerHTML = fehlermeldung;
+ document.getElementById("fehler").innerHTML = fehlermeldung;
 }
+
 //Hier Beginnt die Auswertung der Benutzereingaben
 //Bestimmung welches Geschlecht der Benutzer hat
 function geschlechtBenutzer() {
@@ -57,6 +58,7 @@ function alterBenutzer() {
     alter = parseFloat(alter);
 	if (istEingabeZahl(alter)) {
 		hatFehler = false;
+        return alter;
 	} else {
 
 		hatFehler = true;
@@ -81,11 +83,12 @@ function bewegungBenutzer() {
 }
 //Auswerten wie viel der Benutzer wiegt
 function gewichtBenutzer() {
-	gewicht = document.querySelector("#gewicht").value;
+	var gewicht = document.querySelector("#gewicht").value;
 	hatGewicht = hatEingabe(gewicht);
     gewicht = parseFloat(gewicht);
 	if (istEingabeZahl(gewicht)) {
 		hatFehler = false;
+        return gewicht;
 	} else {
 
 		hatFehler = true;
@@ -96,11 +99,12 @@ function gewichtBenutzer() {
 }
 //Auswertung wie gross der Benutzer ist 
 function groesseBenutzer() {
-    groesse = document.querySelector("#groesse").value;
+    var groesse = document.querySelector("#groesse").value;
 	hatGroesse = hatEingabe(groesse);
     groesse = parseFloat(groesse);
 	if (istEingabeZahl(groesse)) {
 		hatFehler = false;
+        return groesse;
 	} else {
 
 		hatFehler = true;
@@ -111,13 +115,20 @@ function groesseBenutzer() {
 //Funktionen 
 //BMI Rechner 
 function bmiRechner() {
-	gewichtBenutzer();
-	groesseBenutzer();
+	var gewicht = gewichtBenutzer();
+	var groesse = groesseBenutzer();
 	if (!hatFehler && hatGewicht && hatGroesse) {
 		bmiWert = gewicht / (groesse * groesse);
-		document.getElementById("bmiWert").innerHTML = "Ihr BMI-Wert ist:" + bmiWert;
+<<<<<<< HEAD
+        document.write("Ihr BMI-Wert ist:" + bmiWert);
+	}  
+    	  //document.getElementById('bmiWert').innerHTML = "Ihr BMI-Wert ist:" +bmiWert ;	
+=======
+		document.getElementById("BMI").innerHTML = "Ihr BMI-Wert ist:" + bmiWert;
 	}
+>>>>>>> 2e51a3f60ed7147aab4318649489fea3a3a42301
 }
+
 //KalorienBedarfRechner
 function kalorienBedarfRechner() {
     geschlechtBenutzer();
@@ -132,11 +143,12 @@ function kalorienBedarfRechner() {
 		if (istMann) {
 			rmr = (10 * gewicht) + (6.25 * groesse) - (5 * alter) + 5;
 		}
-		if (istFrau) {
+		else if (istFrau) {
 			rmr = (10 * gewicht) + (6.25 * groesse) - (5 * alter) - 161;
 		}
 		kalorien = rmr * bewegung;
-		document.getElementById("kalorien").innerHTML = "Sie haben einen Kalorienbedarf von " + kalorien +".";
+		//document.getElementById("kalorien").innerHTML = "Sie haben einen Kalorienbedarf von " + kalorien +".";
+        document.write("Sie haben einen Kalorienbedarf von " + kalorien +".")
 	}
 	
 
