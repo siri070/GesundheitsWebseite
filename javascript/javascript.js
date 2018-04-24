@@ -115,7 +115,7 @@ function bmiRechner() {
 	groesseBenutzer();
 	if (!hatFehler && hatGewicht && hatGroesse) {
 		bmiWert = gewicht / (groesse * groesse);
-		document.getElementById("bmiWert").innerHTML = "Ihr BMI-Wert ist:" + bmiWert;
+		document.getElementById("BMI").innerHTML = "Ihr BMI-Wert ist:" + bmiWert;
 	}
 }
 //KalorienBedarfRechner
