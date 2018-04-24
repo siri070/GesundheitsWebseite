@@ -119,14 +119,12 @@ function bmiRechner() {
 	var groesse = groesseBenutzer();
 	if (!hatFehler && hatGewicht && hatGroesse) {
 		bmiWert = gewicht / (groesse * groesse);
-<<<<<<< HEAD
         document.write("Ihr BMI-Wert ist:" + bmiWert);
 	}  
     	  //document.getElementById('bmiWert').innerHTML = "Ihr BMI-Wert ist:" +bmiWert ;	
-=======
 		document.getElementById("BMI").innerHTML = "Ihr BMI-Wert ist:" + bmiWert;
 	}
->>>>>>> 2e51a3f60ed7147aab4318649489fea3a3a42301
+
 }
 
 //KalorienBedarfRechner
