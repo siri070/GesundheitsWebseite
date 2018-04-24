@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+     <meta charset="UTF-8">
 <title>Gesundheits Webseite</title>
-
-    <link rel="stylesheet" type="text/css" href="theme.css">
-        <script src="../javascript.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <script src="../javascript/javascript.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link rel="stylesheet"  href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
 
 </head>
 <body>
@@ -23,20 +20,22 @@
   <li><a href="kalorienbedarf.html">Kalorienbedarf</a></li>
   <li><a href="lebensmittel.html">Lebensmittel</a></li>
   <li><a href="rezept.html">Rezept</a></li>
-  <li><a href="rechner.html">Rechener</a></li>
+  <li><a href="rechner.html">Rechner</a></li>
   </ul>
 </div>
 </nav>
     
 <form>
     <h3>BMI-Rechner</h3>
+    <div class="d1">
     <label for="gewicht">Gewicht:
         <input name="gewicht" id="gewicht" size="3" type="text" placeholder="Gewicht">  kg<br>
-    </label>
+    </label></div>
+    <div class="d2">
     <label for="groesse">Grösse:
         <input name="groesse" id="groesse" type="text" size="3" placeholder="Grösse">  m<br>
-    </label>
-    <button type="submit" value="Berechnen" onclick="bmiRechner()">Berechnen</button>
+    </label> </div>
+       <button type="submit" value="Berechnen" onclick="bmiRechner()">Berechnen</button>
     <p name="bmiWert" id="bmiWert"></p><br>
     <p name="fehler" id="fehler1" style="color:red;"> </p>
 </form>  

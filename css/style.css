@@ -24,6 +24,34 @@ li a {
 li a:hover {
     background-color: #01DF74;
 }
+nav{
+    font-size: 24px;
+}
 html{
     font-family: 'Philosopher', sans-serif;
+    font-size: 18px;
+    background-color: #F2F2F2;
+}
+
+.d1{
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 3%;
+    padding-bottom: 1%;
+}
+.d2{
+    padding-top: 0%;
+    padding-left: 5%;
+    padding-right: 3%;
+    padding-bottom: 1%;
+}
+button{
+    background-color: #04B45F;
+    margin: 1% 7%;
+}
+button:hover{
+    background-color: #01DF74;
+}
+footer{
+    background-color: #04B45F;
 }
