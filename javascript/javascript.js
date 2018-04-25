@@ -2,9 +2,6 @@
 var bmiWert = 0;
 var kalorien = 0;
 
-var groesse;
-var gewicht;
-
 var istMann = false;
 var istFrau = false;
 
@@ -35,6 +32,7 @@ function istEingabeZahl(eingabe) {
 }
 //Fehlermeldungen 
 function fehlerMeldung(fehlermeldung) {
+	hatFehler= true;
  document.getElementById("fehler").innerHTML = fehlermeldung;
 }
 
@@ -119,9 +117,11 @@ function bmiRechner() {
 	var groesse = groesseBenutzer();
 	if (!hatFehler && hatGewicht && hatGroesse) {
 		bmiWert = gewicht / (groesse * groesse);
-        //document.write("Ihr BMI-Wert ist:" + bmiWert);
-	}  
-    	  document.getElementById('bmiWert').innerHTML = "Ihr BMI-Wert ist:" +bmiWert ;	
+          document.getElementById('bmiWert').innerHTML = "Ihr BMI-Wert ist:" +bmiWert ;	
+		  document.getElementById('fehler').innerHTML=" "
+	} else {
+		document.getElementById('bmiWert').innerHTML="Überprüfen Sie ihre Eingaben."
+	}
 }
 
 //KalorienBedarfRechner
@@ -142,9 +142,11 @@ function kalorienBedarfRechner() {
 			rmr = (10 * gewicht) + (6.25 * groesse) - (5 * alter) - 161;
 		}
 		kalorien = rmr * bewegung;
-		
-        //document.write("Sie haben einen Kalorienbedarf von " + kalorien +".")
+		document.getElementById("kalorien").innerHTML = "Sie haben einen Kalorienbedarf von " + kalorien +".";
+        document.getElementById('fehler').innerHTML=" ";
+	} else {
+		document.getElementById('bmiWert').innerHTML="Überprüfen Sie ihre Eingaben."
 	}
 	
-        document.getElementById("kalorien").innerHTML = "Sie haben einen Kalorienbedarf von " + kalorien +".";
+    
 }
