@@ -25,11 +25,62 @@
 
 </nav>
 
+<br>    
+<div>
+    <br>
+    <h3>BMI-Rechner</h3>
+    <div class="d1">
+    <label for="gewicht">Gewicht:
+        <input name="gewicht" id="gewicht" size="3" type="text" placeholder="Gewicht">  kg<br>
+    </label></div>
 
- <br>
-<div class="middle">
-	 <p name="fehler" id="fehler"> </p>
+    <div class="d2">
+    <label for="groesse">Grösse:
+        <input name="groesse" id="groesse" type="text" size="3" placeholder="Grösse">  m<br>
+
+    </label>
+    </div>
+
+
+    <button type="submit" value="Berechnen" onclick="bmiRechner()">Berechnen</button>
+    <p name="bmiWert" id="bmiWert"></p><br>
+    <p name="fehler" id="fehler" style="color:red;"> </p>
+    
+
 </div>
+    
+    <div>
+
+    <h3>Kalorienbedarf-Rechner</h3>
+    <div class="d3">
+    <label for="geschlecht">Geschlecht:
+        <input name="geschlecht" id="geschlecht" value="mann"type="radio">Männlich
+        <input name="geschlecht" id="geschlecht" value="frau"type="radio">Weiblich<br>
+    </label></div>
+    <div class="d4">
+    <label for="gewicht">Gewicht:
+        <input name="gewicht" id="gewicht" size="3" type="text" placeholder="Gewicht">  kg<br>
+    </label></div>
+    <div class="d5">
+    <label for="groesse">Grösse:
+        <input name="groesse" id="groesse" size="3" type="text" placeholder="Grösse">  m<br>
+    </label></div>
+    <div class="d6">
+    <label for="alter">Alter:
+        <input name="alter" id="alter" size="3" type="text" placeholder="Alter"><br>
+    </label></div>
+    <div class="d7">
+    <label for="bewegung">Bewegung:
+        <input name="bewegung" id="bewegung" value="wenig" type="radio">wenig
+        <input name="bewegung" id="bewegung" value="mittel" type="radio">mittel
+        <input name="bewegung" id="bewegung" value="viel" type="radio">viel<br>
+    </label></div>
+
+    <input class="button" type="submit" value="Berechnen" onclick="kalorienBedarfRechner()" ><br>
+    <p name="kalorien" id="kalorien"></p>
+    <p name="fehler" id="fehler" style="color: red;"> </p>
+    <br>
+</div> 
    
 
 </body>
