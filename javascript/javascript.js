@@ -147,6 +147,4 @@ function kalorienBedarfRechner() {
 	} else {
 		document.getElementById('bmiWert').innerHTML="Überprüfen Sie ihre Eingaben."
 	}
-	
-    
 }
