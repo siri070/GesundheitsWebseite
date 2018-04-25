@@ -8,6 +8,10 @@ ul {
     top: 0;
     width: 100%;
 }
+.active{
+    background-color:  #01DF74;
+
+}
 
 li {
     float: left;
@@ -167,4 +171,58 @@ th, td {
 #b2{
     margin-left: 70%;
     width: 30%;
+
+}
+
+
+#d5{
+    width: 50%;
+    float: left;
+}
+#b5{
+    margin-left: 50%;
+    width: 50%;
+}
+#d6{
+    width: 50%;
+    float: left;
+}
+#b6{
+    margin-left: 50%;
+    width: 50%;
+}
+
+
+}
+#d8{
+    width: 70%;
+    float: left;
+}
+#b8{
+    margin-left: 70%;
+    width: 30%;
+}
+#d9{
+    width: 50%;
+    float: left;
+}
+#b9{
+    margin-left: 50%;
+    width: 50%;
+}
+#d10{
+    width: 50%;
+    float: left;
+}
+#b10{
+    margin-left: 50%;
+    width: 50%;
+}
+#d11{
+    width: 50%;
+    float: left;
+}
+#b11{
+    margin-left: 50%;
+    width: 50%;
 }
