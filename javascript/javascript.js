@@ -142,7 +142,7 @@ function kalorienBedarfRechner() {
 			rmr = (10 * gewicht) + (6.25 * groesse) - (5 * alter) - 161;
 		}
 		kalorien = rmr * bewegung;
-		document.getElementById("kalorien").innerHTML = "Sie haben einen Kalorienbedarf von " + kalorien +".";
+		document.getElementById("kalorien").innerHTML = "Sie haben einen Kalorienbedarf von " + kalorien +"kcal pro Tag.";
         document.getElementById('fehler').innerHTML=" ";
 	} else {
 		document.getElementById('bmiWert').innerHTML="Überprüfen Sie ihre Eingaben."
