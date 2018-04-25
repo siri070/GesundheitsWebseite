@@ -84,7 +84,11 @@ html{
 input[type=submit]{
     width: 7%;
     height: 10%;
+    border-color: #04B45F;
 
+}
+input[type=submit]:hover{
+    border-color: #01DF74;
 }
 .button:hover{
     background-color: #01DF74;
@@ -99,9 +103,11 @@ button{
     margin: 1% 5%;
     width: 8%;
     height: 10%;
+    border-color: #04B45F;
 }
 button:hover{
     background-color: #01DF74;
+    border-color: #01DF74;
 }
 footer{
     background-color: #04B45F;
@@ -134,4 +140,8 @@ table, th, td {
 th, td {
     padding: 15px;
     text-align: left;
+}
+.b1{
+    margin-left: 700px;
+    width: 300px;
 }
