@@ -119,22 +119,10 @@ function bmiRechner() {
 	var groesse = groesseBenutzer();
 	if (!hatFehler && hatGewicht && hatGroesse) {
 		bmiWert = gewicht / (groesse * groesse);
-<<<<<<< HEAD
         //document.write("Ihr BMI-Wert ist:" + bmiWert);
 	}  
     	  document.getElementById('bmiWert').innerHTML = "Ihr BMI-Wert ist:" +bmiWert ;	
-	}
-
-
-=======
-        document.write("Ihr BMI-Wert ist:" + bmiWert);
-	}  
-    	  //document.getElementById('bmiWert').innerHTML = "Ihr BMI-Wert ist:" +bmiWert ;	
-		document.getElementById("BMI").innerHTML = "Ihr BMI-Wert ist:" + bmiWert;
-	}
-
 }
->>>>>>> ad4932f555dc36fe17d904ad1640c1b2498499a7
 
 //KalorienBedarfRechner
 function kalorienBedarfRechner() {
@@ -154,7 +142,9 @@ function kalorienBedarfRechner() {
 			rmr = (10 * gewicht) + (6.25 * groesse) - (5 * alter) - 161;
 		}
 		kalorien = rmr * bewegung;
+		
         //document.write("Sie haben einen Kalorienbedarf von " + kalorien +".")
 	}
-	document.getElementById("kalorien").innerHTML = "Sie haben einen Kalorienbedarf von " + kalorien +".";
+	
+        document.getElementById("kalorien").innerHTML = "Sie haben einen Kalorienbedarf von " + kalorien +".";
 }
