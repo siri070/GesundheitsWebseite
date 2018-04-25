@@ -155,6 +155,12 @@ th, td {
     margin-left: 70%;
     width: 30%;
 }
+#text{
+    
+  text-align: center;
+  padding-left: 0px;
+  margin-left: opx;
+}
 .wall{
     width: 900px;
     margin-left: 20%;
